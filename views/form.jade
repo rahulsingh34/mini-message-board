@@ -1,7 +1,16 @@
 extends layout
 
 block content
-	form(action="/new", method="post") 
-		input(type="text", name="user", placeholder="Author")
-		input(type="text", name="text", placeholder="Message")
-		button(type="submit") Add Message
+	.header
+		h1 New Message
+	
+	.form-wrapper
+		form(action="/new", method="post")
+			.user
+				h3 Author
+				input(type="text", name="user")
+			.text
+				h3 Message
+				input(type="text", name="text")
+			.submit
+				button(type="submit") Add Message

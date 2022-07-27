@@ -1,11 +1,14 @@
 extends layout
 
 block content
-	h1= title
-	a(href="new")
-		button Add Message
+	.header
+		h1= title
+		a(href="new")
+			button.add-message Add Message
 
-	each n in messages
-		h3= n.text
-		p= n.user 
-		p= n.added
+	.message-wrapper
+		each n in messages
+			.message
+				h3= n.text
+				p= n.user 
+				p= n.added
