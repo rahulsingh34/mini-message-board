@@ -2,6 +2,8 @@ extends layout
 
 block content
 	h1= title
+	a(href="new")
+		button Add Message
 
 	each n in messages
 		h3= n.text
